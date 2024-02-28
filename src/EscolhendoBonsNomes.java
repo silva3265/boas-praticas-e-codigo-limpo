@@ -61,11 +61,9 @@ public class EscolhendoBonsNomes {
 	
 	// codigo bom
 	class ProcessadorFolhaPagamentos{}
+	
+	
+	
 	}
 	
-	
-	
-	
-	
-	
-}
+
