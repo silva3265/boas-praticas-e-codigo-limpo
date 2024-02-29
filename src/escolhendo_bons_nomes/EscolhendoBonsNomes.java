@@ -1,3 +1,4 @@
+package escolhendo_bons_nomes;
 
 public class EscolhendoBonsNomes {
 	
