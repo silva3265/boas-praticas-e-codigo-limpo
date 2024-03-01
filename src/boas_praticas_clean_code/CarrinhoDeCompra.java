@@ -1,12 +1,36 @@
 package boas_praticas_clean_code;
 
+import java.util.Objects;
+
 public class CarrinhoDeCompra {
 
-	void adicionarItem(String nomeProduto, double precoUnitario, int quantidade) {
+	Produto produto;
+	int quantidadeItens;
+
+	void adicionarItem(Produto produto, int quantidade) {
+		Objects.requireNonNull(produto, "Produto deve ser informado"); //Objects.requireNonNull - requirindo que algo nao pode ser nulo (produto)
+
+		if (quantidade <= 0) {
+			throw new IllegalArgumentException("Quantidade deve ser maior que 0"); 
+		}
+
+		System.out.printf("Produto: %s%n", produto.nome);
+
 		// TODO implementar
 	}
 
-	void adicionarItem(Produto produto, int quantidade) {
+	void gerarPedido(Endereco enderecoEntrega) {
+		Objects.requireNonNull(enderecoEntrega, "Endereço de entrega deve ser informado");
+
+		criarNovoPedido(enderecoEntrega);
+	}
+
+	void gerarPedido() {
+		criarNovoPedido(null);
+	}
+
+	// método interno (vamos estudar sobre private em breve)
+	private void criarNovoPedido(Endereco enderecoEntrega) {
 		// TODO implementar
 	}
 
